@@ -8,10 +8,11 @@ include_once 'connection.php'
     <head>
           <meta charset="UTF-8">
           <link rel="shortcut icon" href="images/favicon.ico" type="image/x-ico">
+          <link rel="stylesheet" type="text/css" href="layout/style.css">
           <title>Simple login page in PHP</title>
     </head>
     <body>
-        <h1>Login</h1>
+        <h1>Login Panel</h1>
 
         <?php
         //Criptografar senha através da biblioteca do PHP
@@ -39,10 +40,10 @@ include_once 'connection.php'
                     $_SESSION['nome'] = $row_usuario['nome'];
                     header("Location: dashboard.php");
                 }else{
-                    $_SESSION['msg'] = "<p style='color: red'>Erro: Usuário ou senha inválidos!</p>";
+                    $_SESSION['msg'] = "<p style='color: red'; text-align: center>Erro: Usuário ou senha inválidos!</p>";
                 }
             }else{
-                $_SESSION['msg'] = "<p style='color: red'>Erro: Usuário ou senha inválidos!</p>";
+                $_SESSION['msg'] = "<p style='color: red; text-align: center'>Erro: Usuário ou senha inválidos!</p>";
             }
         }
         
@@ -51,15 +52,16 @@ include_once 'connection.php'
             unset($_SESSION['msg']);
         }           
         ?>
+        <div id="formulario">
+            <form method="POST" id="login">
+                <label>User</label><br>
+                <input type="text" name="usuario" id="box-login" placeholder="Insert your user login"><br><br>
 
-        <form method="POST">
-            <label>User</label><br>
-            <input type="text" name="usuario" placeholder="Insert your user login"><br><br>
-
-            <label>Password</label><br>
-            <input type="password" name="senha_usuario" placeholder="Insert your user password"><br><br> 
-            
-            <input type="submit" value="login" name="SendLogin">
-        </form>
+                <label>Password</label><br>
+                <input type="password" name="senha_usuario" id="box-pass" placeholder="Insert your user password"><br><br> 
+                
+                <input type="submit" value="Login" id="box-submit" name="SendLogin">
+            </form>
+        </div>
     </body>
 </html>
