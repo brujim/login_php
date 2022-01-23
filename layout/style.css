@@ -1,0 +1,26 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+#login {
+    text-align: center;
+    margin-top: 15%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2%;
+}
+
+input {
+    margin-top: 2%;
+}
+
+input:focus,textarea:focus {
+    background-color: #FFD;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+
