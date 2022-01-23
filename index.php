@@ -16,7 +16,7 @@ include_once 'connection.php'
     <body>       
         <?php
         //Criptografar senha através da biblioteca do PHP
-        //echo password_hash("xnhzmu53", PASSWORD_DEFAULT);
+        //echo password_hash("123456", PASSWORD_DEFAULT);
         ?>
 
         <?php
