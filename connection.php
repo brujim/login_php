@@ -2,8 +2,8 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "xnhzmu53";
-$dbname = "simple_login";
+$pass = "";
+$dbname = "";
 $port = 3306;
 
 
